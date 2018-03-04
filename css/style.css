@@ -1,0 +1,277 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  background-color: #f7f7f7;
+}
+
+.left-container, .right-container {
+  width: 50%;
+}
+
+section {
+  padding: 10%;
+  /*    padding-top: 15%;*/
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* -- Main Menu Style Sheet -- */
+
+#main-menu {
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.menu-toggler {
+  position: absolute;
+  right: 10%;
+  top: 0;
+  display: flex;
+}
+
+.short, .long {
+  width: 3px;
+  margin: 3px;
+  margin-top: 0;
+  background-color: black;
+  height: 15px;
+}
+
+.long {
+  height: 35px;
+}
+
+.menu-name {
+  margin: 5px;
+  font-family: 'montserrat';
+  font-size: 14px;
+}
+
+/* Main Menu -END- */
+
+/* -- Main Header Style Sheet -- */
+
+#main-header {
+  height: 95vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.head {
+  width: 100%;
+  height: 67%;
+  text-align: center;
+}
+
+.head>h2 {
+  font-family: 'Montserrat', sans-serif;
+  display: inline-block;
+  position: relative;
+  text-align: left;
+  padding: 5%;
+  height: 100%;
+  margin: 0px 5%;
+}
+
+h2>span:first-child::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -40px;
+  height: 15px;
+  width: 15px;
+  background-color: #191919;
+}
+
+h2>span:first-child {
+  font-size: 3em;
+  font-weight: 600;
+  letter-spacing: 2px;
+  line-height: 70px;
+  position: relative;
+}
+
+h2>span:nth-child(3) {
+  font-size: 2.14em;
+  letter-spacing: 12px;
+  font-weight: 600;
+}
+
+h2>span:nth-of-type(3) {
+  font-size: 1.7em;
+}
+
+h2>span:nth-of-type(4) {
+  font-size: .9em;
+}
+
+h2>span:nth-of-type(3), h2>span:nth-of-type(4) {
+  font-weight: 100;
+  letter-spacing: 2px;
+}
+
+h2>span:nth-of-type(5) {
+  position: absolute;
+  bottom: 10%;
+  right: 6.5%;
+  font-size: 16px;
+  letter-spacing: 5px;
+  color: #535353;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h2>span:nth-of-type(6) {
+  position: absolute;
+  display: inline-block;
+  width: 93%;
+  height: 25px;
+  bottom: 0px;
+  left: 0;
+  border-right: 5px solid #191919;
+}
+
+/* Main Heder -END - */
+
+/* -- Section About Style Sheet -- */
+
+#about {
+  background-color: #191919;
+}
+
+.left-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#about .left-container>div, #projects .left-container>div {
+  text-align: left;
+  margin-right: 15%;
+  position: relative;
+}
+
+#about .left-container>div::after, #projects .left-container>div::after {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #f7f7f7;
+  top: -30px;
+  left: -30px;
+}
+
+#about .left-container>div h2, #projects .left-container>div h2 {
+  color: #f7f7f7;
+  font-family: 'Montserrat';
+  display: inline-block;
+  margin: 0px;
+  font-size: 7.5em;
+  letter-spacing: 5px;
+  line-height: 100px;
+}
+
+#about .right-container>div, #projects .right-container>div {
+  margin-right: 40%;
+  text-align: justify;
+  font-family: 'Open Sans';
+  color: #dedede;
+}
+
+#about .right-container>div>div, #projects .right-container>div>div {
+  margin-top: 25%;
+}
+
+#about .right-container>div>div span, #projects .right-container>div>div span {
+  font-size: 1.1em;
+}
+
+#about .right-container>div>p, #projects .right-container>div>p {
+  color: #7c7c7c
+}
+
+/* Section About -END- */
+
+/* -- Section Services Style Sheet -- */
+
+#services .left-container div {
+  width: 50%;
+  margin-right: 15%;
+  margin-top: 10%;
+}
+
+#services .left-container div>p {
+  text-align: justify;
+  line-height: 30px;
+  font-family: 'Open sans'
+}
+
+#services .right-container>div h2 {
+  color: #191919;
+  font-family: 'Montserrat';
+  margin: 0px;
+  font-size: 7.5em;
+  /*    letter-spacing: 5px;*/
+  line-height: 75px;
+}
+
+#services .right-container div {
+  position: relative;
+}
+
+#services .right-container div::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  top: -30px;
+  left: -30px;
+}
+
+.skills {
+  width: 100%;
+  margin-top: 7%;
+  /*    padding: 0px 7%;*/
+}
+
+.skills>div {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+figure {
+  text-align: center;
+  margin: 30px 0px;
+}
+
+figure>img {
+  width: 65px;
+  height: 65px;
+  display: inline-block;
+}
+
+figure>figcaption {
+  font-family: 'Open Sans';
+  text-align: center;
+}
+
+/* Section Services -END- */
+
+/* -- Section Portfolio -- */
+
+#projects {
+  background-color: #191919;
+}
