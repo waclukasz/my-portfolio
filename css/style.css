@@ -1,277 +1,267 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  overflow: auto;
-  background-color: #f7f7f7;
-}
-
-.left-container, .right-container {
-  width: 50%;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+/*    overflow-x: hidden;*/
 }
 
 section {
-  padding: 10%;
-  /*    padding-top: 15%;*/
-  display: flex;
-  flex-wrap: wrap;
+    margin: 0px;
+    padding: 150px 5%;
 }
 
-/* -- Main Menu Style Sheet -- */
-
-#main-menu {
-  height: 50px;
-  width: 100%;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  margin: 0px;
-  padding: 0px;
+.sn-head {
+    position: relative;
+    color: #f7f7f7;
+    font-family: 'Montserrat';
+    margin: 0px;
+    font-size: 7.5em;
+    letter-spacing: 5px;
+    line-height: 100px;
 }
 
-.menu-toggler {
-  position: absolute;
-  right: 10%;
-  top: 0;
-  display: flex;
+.sn-head::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    top: -30px;
+    left: -30px;
 }
 
-.short, .long {
-  width: 3px;
-  margin: 3px;
-  margin-top: 0;
-  background-color: black;
-  height: 15px;
+.sn-head,
+.sn-content {
+    margin: 0px 40px;
 }
 
-.long {
-  height: 35px;
+.sn-head > span {
+    display: block;
 }
 
-.menu-name {
-  margin: 5px;
-  font-family: 'montserrat';
-  font-size: 14px;
+.sn-content {
+    text-align: justify;
+    font-family: 'Open Sans', sans-serif;
+    padding-top: 100px;
+    max-width: 370px;
+    line-height: 25px;
 }
 
-/* Main Menu -END- */
+.sn-about,
+.sn-services,
+.sn-projects,
+.sn-portfolio {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 
-/* -- Main Header Style Sheet -- */
+/*-----------------------------------------------
+HEADER
+------------------------------------------------- */
 
-#main-header {
-  height: 95vh;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-end;
+.sn-header {
+    position: relative;
+    height: 95vh;
+    width: 100%;
+}
+
+.head,
+.small-head {
+    display: inline-block;
+    position: absolute;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .head {
-  width: 100%;
-  height: 67%;
-  text-align: center;
+    transform: translateX(-50%);
+    bottom: 36%;
+    left: 50%;
+    margin: 0px;
+    font-weight: 600;
 }
 
-.head>h2 {
-  font-family: 'Montserrat', sans-serif;
-  display: inline-block;
-  position: relative;
-  text-align: left;
-  padding: 5%;
-  height: 100%;
-  margin: 0px 5%;
+.head > span {
+    display: block;
 }
 
-h2>span:first-child::before {
-  content: "";
-  position: absolute;
-  top: -50px;
-  left: -40px;
-  height: 15px;
-  width: 15px;
-  background-color: #191919;
+.head > span:nth-of-type(1) {
+    position: relative;
+    font-size: 2.3em;
+    font-weight: 600;
+    line-height: 60px;
+    letter-spacing: 2px;
 }
 
-h2>span:first-child {
-  font-size: 3em;
-  font-weight: 600;
-  letter-spacing: 2px;
-  line-height: 70px;
-  position: relative;
+.head > span:nth-of-type(1)::before {
+    content: "";
+    position: absolute;
+    top: -70px;
+    left: -40px;
+    height: 15px;
+    width: 15px;
+    background-color: #191919;
 }
 
-h2>span:nth-child(3) {
-  font-size: 2.14em;
-  letter-spacing: 12px;
-  font-weight: 600;
+.head > span:nth-of-type(2) {
+    font-size: 1.7em;
+    letter-spacing: 11px;
+    font-weight: 600;
 }
 
-h2>span:nth-of-type(3) {
-  font-size: 1.7em;
+.head > span:nth-of-type(3) {
+    font-size: 1.3em;
+    font-weight: 100;
+    letter-spacing: 2px;
 }
 
-h2>span:nth-of-type(4) {
-  font-size: .9em;
+.head > span:nth-of-type(4) {
+    font-size: .7em;
+    font-weight: 100;
+    letter-spacing: 2px;
 }
 
-h2>span:nth-of-type(3), h2>span:nth-of-type(4) {
-  font-weight: 100;
-  letter-spacing: 2px;
+.small-head {
+    bottom: 0px;
+    left: 56%;
 }
 
-h2>span:nth-of-type(5) {
-  position: absolute;
-  bottom: 10%;
-  right: 6.5%;
-  font-size: 16px;
-  letter-spacing: 5px;
-  color: #535353;
-  font-family: 'Open Sans', sans-serif;
+.small-head > h2 {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0px;
+    padding: 0px 0px 50px 0px;
+    font-size: 1.1em;
+    font-weight: 400;
+    letter-spacing: 5px;
+    color: #535353;
 }
 
-h2>span:nth-of-type(6) {
-  position: absolute;
-  display: inline-block;
-  width: 93%;
-  height: 25px;
-  bottom: 0px;
-  left: 0;
-  border-right: 5px solid #191919;
+.border {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    height: 25px;
+    width: 5px;
+    background-color: #191919;
 }
 
-/* Main Heder -END - */
 
-/* -- Section About Style Sheet -- */
+/*-----------------------------------------------
+ABOUT & PROJECTS
+------------------------------------------------- */
 
-#about {
-  background-color: #191919;
+.sn-about,
+.sn-projects,
+.sn-portfolio {
+    background-color: #191919;
 }
 
-.left-container {
-  display: flex;
-  justify-content: flex-end;
+.about-header::before,
+.projects-header::before{
+    background-color: #f7f7f7;
 }
 
-#about .left-container>div, #projects .left-container>div {
-  text-align: left;
-  margin-right: 15%;
-  position: relative;
+.about-content,
+.projects-content {
+    color: #7c7c7c;
 }
 
-#about .left-container>div::after, #projects .left-container>div::after {
-  position: absolute;
-  content: "";
-  width: 10px;
-  height: 10px;
-  background-color: #f7f7f7;
-  top: -30px;
-  left: -30px;
+.about-content > p:nth-of-type(1),
+.projects-content > p:nth-of-type(1) {
+    color: #dedede;
 }
 
-#about .left-container>div h2, #projects .left-container>div h2 {
-  color: #f7f7f7;
-  font-family: 'Montserrat';
-  display: inline-block;
-  margin: 0px;
-  font-size: 7.5em;
-  letter-spacing: 5px;
-  line-height: 100px;
+/*-----------------------------------------------
+SERVICES
+------------------------------------------------- */
+
+.services-header {
+    color: #191919;
 }
 
-#about .right-container>div, #projects .right-container>div {
-  margin-right: 40%;
-  text-align: justify;
-  font-family: 'Open Sans';
-  color: #dedede;
+/*-----------------------------------------------
+SKILLS
+------------------------------------------------- */
+.skills,
+.sn-portfolio {
+    padding-top: 0px;
 }
 
-#about .right-container>div>div, #projects .right-container>div>div {
-  margin-top: 25%;
+.skills > div {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 0px 100px;
 }
 
-#about .right-container>div>div span, #projects .right-container>div>div span {
-  font-size: 1.1em;
+.skills figure {
+    text-align: center;
+    margin: 30px 0px;
 }
 
-#about .right-container>div>p, #projects .right-container>div>p {
-  color: #7c7c7c
+.skills figure > img {
+    width: 65px;
+    height: 65px;
+    display: inline-block;
 }
 
-/* Section About -END- */
-
-/* -- Section Services Style Sheet -- */
-
-#services .left-container div {
-  width: 50%;
-  margin-right: 15%;
-  margin-top: 10%;
+.skills figure > figcaption {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
 }
 
-#services .left-container div>p {
-  text-align: justify;
-  line-height: 30px;
-  font-family: 'Open sans'
+/*-----------------------------------------------
+PORTFOLIO
+------------------------------------------------- */
+.pf-left-side,
+.pf-right-side {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 20px;
 }
 
-#services .right-container>div h2 {
-  color: #191919;
-  font-family: 'Montserrat';
-  margin: 0px;
-  font-size: 7.5em;
-  /*    letter-spacing: 5px;*/
-  line-height: 75px;
+.pf-right-side {
+    padding-top: 160px;
 }
 
-#services .right-container div {
-  position: relative;
+.pf-item {
+    max-width: 300px;
 }
 
-#services .right-container div::after {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background-color: black;
-  top: -30px;
-  left: -30px;
+.pf-item > img {
+    display: block;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-color: #121212;    
 }
 
-.skills {
-  width: 100%;
-  margin-top: 7%;
-  /*    padding: 0px 7%;*/
+.pf-item > img::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    height: 70px;
+    width: 1px;
+    bottom: -55px;
+    left: 40px;
+    background-color: #a3a3a3
 }
 
-.skills>div {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
+.pf-item > figcaption {
+    padding-top: 55px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    text-align: justify;
+    color: #a3a3a3;
 }
 
-figure {
-  text-align: center;
-  margin: 30px 0px;
+.pf-item > figcaption > p:last-of-type {
+    text-align: right;
 }
 
-figure>img {
-  width: 65px;
-  height: 65px;
-  display: inline-block;
-}
 
-figure>figcaption {
-  font-family: 'Open Sans';
-  text-align: center;
-}
 
-/* Section Services -END- */
-
-/* -- Section Portfolio -- */
-
-#projects {
-  background-color: #191919;
-}
