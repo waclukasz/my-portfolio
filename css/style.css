@@ -6,10 +6,11 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f7f7f7;
-/*    overflow-x: hidden;*/
+    /*    overflow-x: hidden;*/
 }
 
-section {
+section,
+footer {
     margin: 0px;
     padding: 150px 5%;
 }
@@ -17,7 +18,7 @@ section {
 .sn-head {
     position: relative;
     color: #f7f7f7;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     margin: 0px;
     font-size: 7.5em;
     letter-spacing: 5px;
@@ -59,6 +60,105 @@ section {
     flex-direction: row;
     justify-content: center;
 }
+
+/*-----------------------------------------------
+MAIN MENU
+------------------------------------------------- */
+
+.navbar {
+    position: fixed;
+    width: 100vw;
+    margin: 0px;
+    padding: 0px;
+    z-index: 100;
+}
+
+.nav-toggler {
+    position: absolute;
+    display: flex;
+    top: 0px;
+    right: 50px;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+.nav-toggler > div:first-of-type {
+    width: 5px;
+    height: 12px;
+    background-color:#a3a3a3;
+    transition: .2s ease-out;
+}
+
+.nav-toggler > div:last-of-type {
+    transform: rotate(180deg);
+    font-family: "Open Sans", sans-serif;
+    writing-mode: vertical-rl;
+    letter-spacing: 1px;
+    color: #a3a3a3;
+    transition: .2s ease-out;
+    padding-bottom: 2px;
+}
+
+.nav-toggler:hover > div:first-of-type {
+    height: 55px;
+}
+
+.nav-toggler:hover > div:last-of-type {
+    letter-spacing: 3px;
+}
+
+.menu-container {
+    position: absolute;
+    width: 100vw;
+    height: 0vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #191919;
+    overflow: hidden;
+
+    font-family: "Open Sans", sans-serif;
+}
+
+.menu-container > h2 {
+    color: #a3a3a3;
+    letter-spacing: 3px;
+    font-size: 1.7em;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    text-align: center;
+}
+
+.nav-container {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    text-align: center;
+
+}
+
+.nav-item {
+    margin: 10px 0px;
+}
+
+.nav-item > a {
+    font-size: 3em;
+    color: #a3a3a3;
+    text-decoration: none;
+    letter-spacing: 5px;
+    transition: .3s ease-out;
+}
+
+.nav-item > a:hover {
+    color: #ffffff;
+}
+
+.social-media.nav-social {
+    padding: 50px 0px;
+    margin: 0px;
+}
+
 
 /*-----------------------------------------------
 HEADER
@@ -161,7 +261,7 @@ ABOUT & PROJECTS
 }
 
 .about-header::before,
-.projects-header::before{
+.projects-header::before {
     background-color: #f7f7f7;
 }
 
@@ -186,6 +286,7 @@ SERVICES
 /*-----------------------------------------------
 SKILLS
 ------------------------------------------------- */
+
 .skills,
 .sn-portfolio {
     padding-top: 0px;
@@ -217,6 +318,7 @@ SKILLS
 /*-----------------------------------------------
 PORTFOLIO
 ------------------------------------------------- */
+
 .pf-left-side,
 .pf-right-side {
     display: flex;
@@ -234,24 +336,33 @@ PORTFOLIO
 
 .pf-item > img {
     display: block;
-    position: relative;
     width: 300px;
     height: 300px;
-    background-color: #121212;    
+    border: 1px solid #a3a3a3;
+    border-radius: 5px;
+    background-color: #121212;
+    filter: saturate(0%);
+    transition: .4s ease-out;
 }
 
-.pf-item > img::after {
+.pf-item > img:hover {
+    filter: saturate(100%);
+
+}
+
+.pf-item > figcaption::after {
     content: "";
     position: absolute;
     display: inline-block;
     height: 70px;
     width: 1px;
-    bottom: -55px;
+    top: -15px;
     left: 40px;
     background-color: #a3a3a3
 }
 
 .pf-item > figcaption {
+    position: relative;
     padding-top: 55px;
     font-family: 'Open Sans', sans-serif;
     font-size: 12px;
@@ -259,9 +370,201 @@ PORTFOLIO
     color: #a3a3a3;
 }
 
-.pf-item > figcaption > p:last-of-type {
+.pf-item > figcaption > a {
+    display: block;
     text-align: right;
+    color: #dbdbdb;
+    letter-spacing: 2px;
+}
+
+.pf-item > figcaption > h3 {
+    color: #dbdbdb;
 }
 
 
+/*-----------------------------------------------
+FOOTER
+------------------------------------------------- */
 
+.main-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #131313;
+}
+
+.main-footer > h3,
+.main-footer > h2 {
+    position: relative;
+    color: #f7f7f7;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin: 0px;
+}
+
+.main-footer > h2::before {
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    background-color: #f7f7f7;
+    top: -25px;
+    left: -30px;
+}
+
+.form-container {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.form-container > input:not([type="submit"]),
+.form-container > textarea {
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    -moz-outline: none;
+    margin: 0px 0px 5px 0px;
+    padding: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    background-color: #191919;
+    color: #dbdbdb;
+    transition: .4s ease-out;
+}
+
+.form-container > input:not([type="submit"])::placeholder,
+.form-container > textarea::placeholder {
+    color: #484848
+}
+
+.form-container > input:not([type="submit"]):hover,
+.form-container > textarea:hover {
+    background-color: #363636;
+}
+
+.form-container > input:not([type="submit"]):focus,
+.form-container > textarea:focus {
+    background-color: #363636;
+}
+
+.form-container > textarea {
+    min-height: 90px;
+    min-width: 100%;
+    max-width: 100%;
+}
+
+.form-container > input[type="submit"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 30px;
+    width: 75px;
+    background-color: transparent;
+    color: #a3a3a3;
+    border: 2px solid #292929;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: .4s ease-out;
+}
+
+.form-container > input[type="submit"]:hover {
+    background-color: #292929;
+}
+
+.form-container > input[type="submit"]:focus,
+a:focus {
+    outline: none;
+}
+
+.social-media {
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 150px;
+    font-size: 30px;
+}
+
+.social-media a {
+    color: #a3a3a3;
+    transition: .3s ease-out;
+}
+
+.social-media a:hover {
+    color: #ebebeb;
+}
+
+
+/*-----------------------------------------------
+RESPONSIVE
+------------------------------------------------- */
+
+@media (max-width: 879px) {
+    .sn-about,
+    .sn-services,
+    .sn-projects,
+    .sn-portfolio {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .services-header {
+        order: -1;
+    }
+    .skills > div {
+        padding: 0px;
+    }
+    .pf-right-side {
+        padding-top: 0px;
+    }
+    .form-container {
+        width: 90%
+    }
+    .social-media {
+        width: 60%;
+    }
+}
+
+@media (max-width: 490px) {
+    section,
+    footer {
+        padding: 100px 5px;
+    }
+
+    .menu-container > h2 {
+        opacity: 0;
+    }
+
+    .sn-head {
+        font-size: 5.5em;
+        line-height: 80px;
+    }
+
+    .sn-content {
+        padding-top: 50px;
+    }
+
+    .head {
+        bottom: 40%;
+    }
+
+    .head > span:nth-of-type(1) {
+        font-size: 1.5em;
+    }
+    .head > span:nth-of-type(2) {
+        font-size: 1em;
+    }
+    .form-container {
+        width: 100%
+    }
+
+    .main-footer > h3 {
+        text-align: center;
+    }
+}

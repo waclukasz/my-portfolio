@@ -17,15 +17,29 @@
 </head>
 
 <body>
-    <!--
-    <menu id="main-menu">
-        <div class="menu-toggler">
-            <div class="short"></div>
-            <div class="long"></div>
-            <div class="menu-name">menu</div>
+
+    <menu id="main-menu" class="navbar">
+        <div class="nav-toggler">
+            <div></div>
+            <div>menu</div>
+        </div>
+        <div class="menu-container">
+            <h2>Łukasz Wac - Front End Developer</h2>
+            <ul class="nav-container">
+                <li class="nav-item"><a href="#about">about</a></li>
+                <li class="nav-item"><a href="#services">services</a></li>
+                <li class="nav-item"><a href="#projects">projects</a></li>
+                <li class="nav-item"><a href="#contact">contact</a></li>
+            </ul>
+            <div class="social-media nav-social">
+                <a href=""><i class="fab fa-facebook"></i></a>
+                <a href=""><i class="fab fa-linkedin"></i></a>
+                <a href=""><i class="fas fa-envelope"></i></a>
+                <a href=""><i class="fab fa-github-square"></i></a>
+            </div>
         </div>
     </menu>
--->
+
 
     <header id="main-header" class="sn-header">
         <h1 class="head">
@@ -116,42 +130,61 @@
     <section class="sn-portfolio">
         <div class="pf-left-side">
             <figure class="pf-item">
-                <img src="" alt="">
+                <img src="img/s4s.png" alt="s4s-website">
                 <figcaption>
-                    <h3>Lorem ipsum dolor sit amet.</h3>
+                    <h3>Squash For Silesia Association Website</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem tenetur numquam aspernatur mollitia expedita, pariatur quis hic beatae architecto voluptate quasi, ad voluptatibus tempora porro? Magnam, eaque ipsum impedit voluptatum.</p>
-                    <p>Lorem ipsum</p>
+                    <a href="#">visit</a>
                 </figcaption>
             </figure>
             <figure class="pf-item">
-                <img src="" alt="">
+                <img src="img/note-app.png" alt="">
                 <figcaption>
-                    <h3>Lorem ipsum dolor sit amet.</h3>
+                    <h3>Create You Notes - App</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem tenetur numquam aspernatur mollitia expedita, pariatur quis hic beatae architecto voluptate quasi, ad voluptatibus tempora porro? Magnam, eaque ipsum impedit voluptatum.</p>
-                    <p>Lorem ipsum</p>
+                    <a href="#">visit</a>
                 </figcaption>
             </figure>
         </div>
         <div class="pf-right-side">
             <figure class="pf-item">
-                <img src="" alt="">
+                <img src="img/todo-list.png" alt="">
                 <figcaption>
-                    <h3>Lorem ipsum dolor sit amet.</h3>
+                    <h3>Make Your To-Do List</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem tenetur numquam aspernatur mollitia expedita, pariatur quis hic beatae architecto voluptate quasi, ad voluptatibus tempora porro? Magnam, eaque ipsum impedit voluptatum.</p>
-                    <p>Lorem ipsum</p>
+                    <a href="#">visit</a>
                 </figcaption>
             </figure>
             <figure class="pf-item">
-                <img src="" alt="">
+                <img src="img/pf-bootstrap.png" alt="">
                 <figcaption>
-                    <h3>Lorem ipsum dolor sit amet.</h3>
+                    <h3>Universal Bootsrap Portfolio</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem tenetur numquam aspernatur mollitia expedita, pariatur quis hic beatae architecto voluptate quasi, ad voluptatibus tempora porro? Magnam, eaque ipsum impedit voluptatum.</p>
-                    <p>Lorem ipsum</p>
+                    <a href="#">visit</a>
                 </figcaption>
             </figure>
         </div>
-
     </section>
+
+    <footer id="contact" class="main-footer">
+        <h2>Want to hire me?</h2>
+        <h3>It would be a pleasure to work with you.</h3>
+        <form action="https://formspree.io/wac.lukasz@gmail.com" method="POST" class="form-container">
+            <input name="Imię i Nazwisko:" type="text" placeholder="Name" required>
+            <input name="Nazwisko:" type="text" placeholder="Company" required>
+            <input name="Numer Telefonu:" type="tel" placeholder="Phone Number" required>
+            <input name="_replyto" type="email" placeholder="E-Mail" required>
+            <textarea name="Wiadomość:" placeholder="Write your message"></textarea>
+            <input type="hidden" name="_next" value="http://google.pl">
+            <input type="submit" value="send">
+        </form>
+        <div class="social-media">
+            <a href=""><i class="fab fa-facebook"></i></a>
+            <a href=""><i class="fab fa-linkedin"></i></a>
+            <a href=""><i class="fas fa-envelope"></i></a>
+            <a href=""><i class="fab fa-github-square"></i></a>
+        </div>
+    </footer>
 
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/main.js"></script>
