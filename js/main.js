@@ -1,4 +1,18 @@
+// Expand the main navigation menu
 $('.nav-toggler').on('click', expandMenu);
+
+// Smooth scroll on menu elements
+$('.nav-item > a').on('click', function (e) {
+    e.preventDefault();
+
+    let $target = $($(this).attr('href'));
+
+    $('html, body').delay(300).animate({
+        scrollTop: $target.offset().top
+    }, 500);
+    
+    expandMenu();
+});
 
 function expandMenu() {
     let $menu = $('.menu-container');
