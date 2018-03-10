@@ -1,31 +1,28 @@
 $(document).ready(function () {
-    $(this).scrollTop(0);
-    
+    $(document).scrollTop(0);
+
     //headerAnimation();
     loader();
+
+    // Expand the main navigation menu
+    $('.nav-toggler').on('click', expandMenu);
+
+    // Smooth scroll on menu elements
+    $('.nav-item > a').on('click', function (e) {
+        e.preventDefault();
+
+        let $target = $($(this).attr('href'));
+
+        $('html, body').delay(300).animate({
+            scrollTop: $target.offset().top
+        }, 500);
+
+        expandMenu();
+    });
+
+    // Animate main haeder on scroll event
+    $(document).on('scroll', headerAnimation);
 });
-
-
-// Expand the main navigation menu
-$('.nav-toggler').on('click', expandMenu);
-
-// Smooth scroll on menu elements
-$('.nav-item > a').on('click', function (e) {
-    e.preventDefault();
-
-    let $target = $($(this).attr('href'));
-
-    $('html, body').delay(300).animate({
-        scrollTop: $target.offset().top
-    }, 500);
-
-    expandMenu();
-});
-
-// Animate main haeder on scroll event
-$('body').on('scroll', headerAnimation);
-
-
 
 function expandMenu() {
     let $menu = $('.menu-container');
@@ -71,7 +68,7 @@ function loader() {
     let $loaderStart = $('.loader-start');
     let $loaderCover = $('.loader-cover');
 
-    $('html, body').css({
+    $('body').css({
         overflow: "hidden"
     });
 
@@ -106,8 +103,8 @@ function headerLoader() {
         opacity: "1",
         margin: "0"
     }, 900, "swing", function () {
-        $('html, body').css({
-            overflow: "auto"
+        $('body').css({
+            overflow: "scroll"
         });
     });
 };
@@ -127,6 +124,7 @@ function smallHeaderLoader() {
 
 function headerAnimation() {
     console.log('dziala');
+
     let $headerItems = $('.head > span');
     let scrollTop = $('html, body').scrollTop();
 
