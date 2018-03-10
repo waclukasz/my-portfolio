@@ -1,5 +1,10 @@
-loader();
-//headerAnimation();
+$(document).ready(function () {
+    $(this).scrollTop(0);
+    
+    //headerAnimation();
+    loader();
+});
+
 
 // Expand the main navigation menu
 $('.nav-toggler').on('click', expandMenu);
@@ -17,7 +22,10 @@ $('.nav-item > a').on('click', function (e) {
     expandMenu();
 });
 
-$(document).on('scroll', headerAnimation);
+// Animate main haeder on scroll event
+$('body').on('scroll', headerAnimation);
+
+
 
 function expandMenu() {
     let $menu = $('.menu-container');
@@ -62,8 +70,6 @@ function loader() {
     let $loaderBox = $('.loader');
     let $loaderStart = $('.loader-start');
     let $loaderCover = $('.loader-cover');
-
-    $('html, body').scrollTop(0);
 
     $('html, body').css({
         overflow: "hidden"
@@ -120,12 +126,13 @@ function smallHeaderLoader() {
 }
 
 function headerAnimation() {
+    console.log('dziala');
     let $headerItems = $('.head > span');
     let scrollTop = $('html, body').scrollTop();
 
-    if (scrollTop < $('#main-header').height()) {
+    if (scrollTop < $('#main-header').height() * 0.8) {
         $headerItems.css({
-            margin: scrollTop / 25 // to make marginTop value smaller
+            margin: Math.round(scrollTop / 15) // to make marginTop value smaller
         });
     };
 }
